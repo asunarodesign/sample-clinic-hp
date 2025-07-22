@@ -1,0 +1,376 @@
+@charset "UTF-8";
+
+/* style.css など */
+:root {
+  --main-color: #75c6e1;
+  --sub-color: #fffdfc;
+  --font-size-base: 16px;
+  --bs-body-tertiary-bg: #a1dcf0;
+  --hover-color: #375d69;
+}
+
+body {
+  font-size: 100%;
+}
+
+.anchor-adjust {
+  position: relative;
+  top: -50px;
+  /* ヘッダーの高さに合わせて調整 */
+  padding-top: 80px;
+}
+
+.container {
+  max-width: 1080px;
+}
+
+.align-center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--sub-color);
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+ul {
+  list-style: none;
+  color: var(--sub-color);
+}
+
+
+img {
+  width: 100%;
+}
+
+h1 {
+  color: var(--sub-color);
+}
+
+h2 {
+  display: inline-block;
+  /* テキストの幅に合わせる */
+  border-bottom: 3px solid #3AABD2;
+  /* 下線の太さと色を指定 */
+  padding-bottom: 4px;
+  /* 下線との間隔を調整（任意） */
+}
+
+h3 {
+  text-align: center;
+}
+
+.custom-navbar {
+  background-color: var(--main-color);
+}
+
+.navbar-nav {
+  margin: 0 auto;
+  display: table;
+  float: none;
+  display: flex;
+  gap: 2rem;
+  margin-left: 10rem;
+}
+
+.navbar-toggler {
+  border: 0;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23fffdfc' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar-nav a {
+  color: var(--sub-color);
+}
+
+.navbar-nav a:hover {
+  color: var(--hover-color);
+}
+
+.nav-link.active {
+  color: var(--sub-color) !important;
+  /* ご希望の色に変更 */
+}
+
+.nav-link.active:hover {
+  color: var(--hover-color) !important;
+  /* 好みのホバー色に調整 */
+}
+
+.hero {
+  margin-bottom: 1rem;
+}
+
+.firstview {
+  height: 100vh;
+}
+
+.clinic-hours {
+  width: 100%;
+  max-width: 600px;
+  margin: 2em auto;
+  border-collapse: collapse;
+  font-family: "Helvetica Neue", sans-serif;
+  text-align: center;
+  background-color: #fffdfc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.clinic-hours caption {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+.clinic-hours th,
+.clinic-hours td {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+}
+
+.clinic-hours thead {
+  background-color: #f7f7f7;
+}
+
+.intro {
+  display: flex;
+  /* background-color: beige; */
+  gap: 1rem;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.image-box {
+  flex: 1;
+  height: 50vh;
+  background-image: url(images/doctor.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text-box {
+  /* background-color: #d9d9d9; */
+  width: 50%;
+  height: 50vh;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: left;
+  padding: 1rem;
+}
+
+
+.text-box p {
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%;
+  margin-top: 2rem;
+  gap: 1rem;
+  margin: 0 auto;
+  /* カードの間隔も調整できます */
+}
+
+.icon-img img {
+  width: 80px;
+  /* モバイル時のアイコンサイズ */
+}
+
+.icons p {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  font-size: 0.8rem;
+
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  border-radius: 0;
+  border: 0;
+}
+
+.card-img-top {
+  border-radius: 8px;
+}
+
+.icon-img {
+  border: 3px solid #3AABD2;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.map-wrapper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+  aspect-ratio: 4 / 3;
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--main-color);
+  padding: 3rem;
+  color: var(--sub-color);
+}
+
+footer a {
+  color: var(--sub-color);
+}
+
+footer ul {
+  color: var(--sub-color);
+}
+
+.info {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* スマホ版 */
+@media(max-width: 959px) {
+  .hero {
+    height: 50vh;
+    background-image: url(images/hero-img-sm.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* タブレット版 */
+@media(min-width:768px) {
+  /* .icons {
+    max-width: 60%;
+  } */
+
+  .image-box {
+    width: 50%;
+    height: 60vh;
+    background-image: url(images/doctor.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .text-box {
+    background-color: #d9d9d9;
+    width: 50%;
+    height: 60vh;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: left;
+    padding: 1rem;
+  }
+}
+
+/* デスクトップ版 */
+@media(min-width:960px) {
+  .hero {
+    width: 100%;
+    height: 60vh;
+    background-image: url(images/hero-img-lg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .intro {
+    margin-top: 2rem;
+    gap: 2rem;
+  }
+
+  .image-box {
+    width: 50%;
+    height: 60vh;
+    background-image: url(images/doctor.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+  .text-box {
+    padding: 3rem;
+    background-color: #d9d9d9;
+    width: 50%;
+    height: 60vh;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    text-align: left;
+    padding: 1rem;
+  }
+}
+
+.text-box p {
+  line-height: 1.6;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+.icons {
+  max-width: 60%;
+  margin-top: 2rem;
+  /* background-color: #d9d9d9; */
+}
+
+.icon-img img {
+  width: 60px;
+  /* デスクトップで縮小 */
+}
+.map-wrapper {
+  height: 400px;
+}
+.iframe {
+  height: auto;
+}
+h2 {
+  margin: 2rem;
+}
