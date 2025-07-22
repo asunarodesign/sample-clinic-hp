@@ -4,7 +4,7 @@
 :root {
   --main-color: #75c6e1;
   --sub-color: #fffdfc;
-  --font-size-base: 16px;
+  /* --font-size-base: 16px; */
   --bs-body-tertiary-bg: #a1dcf0;
   --hover-color: #375d69;
 }
@@ -17,7 +17,7 @@ body {
   position: relative;
   top: -50px;
   /* ヘッダーの高さに合わせて調整 */
-  padding-top: 80px;
+  padding-top: 60px;
 }
 
 .container {
@@ -40,6 +40,10 @@ a:hover {
 ul {
   list-style: none;
   color: var(--sub-color);
+}
+
+li {
+  padding-top: 0.5rem;
 }
 
 
@@ -158,7 +162,7 @@ h3 {
   width: 100%;
   height: 50vh;
   background-image: url(images/doctor.png);
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -176,11 +180,14 @@ h3 {
   right: 0;
   z-index: 1;
 }
+
 .text-box h3 {
   color: var(--sub-color);
+  margin-top: 1rem;
 }
+
 .text-box p {
-  font-size: 16px;
+  font-size: 1rem !important;
   color: var(--sub-color);
 }
 
@@ -289,9 +296,14 @@ footer ul {
 
 /* タブレット版 */
 @media(min-width:768px) {
+
   /* .icons {
     max-width: 60%;
   } */
+  .anchor-adjust {
+    scroll-margin-top: 0;
+  }
+
   .image-box {
     width: 50%;
     height: 60vh;
@@ -302,20 +314,24 @@ footer ul {
   }
 
   .text-box {
-    background-color: #d9d9d9;
+    background-color: rgb(97, 88, 58);
     width: 50%;
     height: 60vh;
     word-break: break-word;
     overflow-wrap: break-word;
     white-space: normal;
     text-align: left;
-    padding: 1rem;
+    padding: 2rem;
     position: relative;
   }
 }
 
 /* デスクトップ版 */
 @media(min-width:960px) {
+  .anchor-adjust {
+    scroll-margin-top: 30px;
+  }
+
   .hero {
     width: 100%;
     height: 60vh;
@@ -342,31 +358,16 @@ footer ul {
   }
 
 
-  /* .text-box {
-    padding: 3rem;
-    background-color: #332f2f30;
-    width: 40%;
+  .text-box {
+    background-color: rgb(97, 88, 58);
+    width: 30%;
     height: 60vh;
     word-break: break-word;
     overflow-wrap: break-word;
     white-space: normal;
     text-align: left;
-    padding: 1rem;
-  } */
-
-  .text-box {
-  background-color: rgb(97, 88, 58);
-  width: 30%;
-  height: 60vh;
-  word-break: break-word;
-  overflow-wrap: break-word;
-  white-space: normal;
-  text-align: left;
-  padding: 2rem;
-  /* position: absolute;
-  right: 0;
-  z-index: 1; */
-}
+    padding: 2rem;
+  }
 
 }
 
@@ -386,15 +387,19 @@ footer ul {
   width: 60px;
   /* デスクトップで縮小 */
 }
+
 .map-wrapper {
   height: 400px;
 }
+
 .iframe {
   height: auto;
 }
+
 h2 {
   margin: 2rem;
 }
+
 .intro {
   gap: 0;
 }
